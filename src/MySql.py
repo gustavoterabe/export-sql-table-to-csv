@@ -69,6 +69,7 @@ class MySql:
             queryGetData += f"WHERE {cond}"
 
         columns = list(self.RunQuery(queryGetColumns))
+        columns = [col for col, in columns]
         data = self.RunQuery(queryGetData)
 
         return columns, data
